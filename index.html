@@ -1,6 +1,6 @@
 <html>
   <head>
-    <title>Angular 2 QuickStart</title>
+    <title>Criticando Cine</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="styles.css">
@@ -15,9 +15,36 @@
     <script>
       System.import('app').catch(function(err){ console.error(err); });
     </script>
+
+    <!-- Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/ -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/criticando-cine.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+
   </head>
   <!-- 3. Display the application -->
-  <body>
-    <my-app>Loading...</my-app>
+  <body id="page-top" class="index">
+
+      <comentando-cine-app></comentando-cine-app>
+
+      <!-- jQuery -->
+      <script src="js/jquery.js"></script>
+
+      <!-- Bootstrap Core JavaScript -->
+      <script src="js/bootstrap.min.js"></script>
+
+      <!-- Plugin JavaScript -->
+      <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+      <script src="js/classie.js"></script>
+      <script src="js/cbpAnimatedHeader.js"></script>
+
+      <!-- Custom Theme JavaScript -->
+      <script src="js/criticando-cine.js"></script>
   </body>
 </html>

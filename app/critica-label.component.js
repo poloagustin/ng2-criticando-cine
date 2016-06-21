@@ -9,17 +9,20 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var AppComponent = (function () {
-    function AppComponent() {
+var ComentarioLabelComponent = (function () {
+    function ComentarioLabelComponent() {
     }
-    AppComponent = __decorate([
+    ComentarioLabelComponent = __decorate([
         core_1.Component({
-            selector: 'my-app',
-            template: '<h1>My First Angular 2 App</h1>'
+            selector: 'comentario-label',
+            templateUrl: './app/comentario-label.html',
+            host: {
+                class: 'row'
+            }
         }), 
         __metadata('design:paramtypes', [])
-    ], AppComponent);
-    return AppComponent;
+    ], ComentarioLabelComponent);
+    return ComentarioLabelComponent;
 }());
-exports.AppComponent = AppComponent;
-//# sourceMappingURL=app.component.js.map
+exports.ComentarioLabelComponent = ComentarioLabelComponent;
+//# sourceMappingURL=critica-label.component.js.map

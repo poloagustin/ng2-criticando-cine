@@ -48,7 +48,7 @@
               <img class="img-responsive" src="img/dory.png" alt="">
           </div>
           <div class="col-lg-6">
-            <comentario-form></comentario-form>
+            <comentario-form (addComentario)="addComentario($event)"></comentario-form>
           </div>
         </div>
     </div>
@@ -84,7 +84,14 @@
             </div>
         </div>
         <div class="row">
-          <comentario-label></comentario-label>
+          <comentario-label *ngFor="let comentario of sortedComentarios(); let index=index"
+            [inputComentario]="comentario.comentario"
+            [inputNombre]="comentario.nombre"
+            [inputVotos]="comentario.votos"
+            [index]="index"
+            (sumarVoto)="sumarVoto($event)"
+            (restarVoto)="restarVoto($event)"
+            ></comentario-label>
         </div>
     </div>
 </section>

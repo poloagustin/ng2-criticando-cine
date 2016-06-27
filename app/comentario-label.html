@@ -1,13 +1,13 @@
-<div class="col-sm-12 critica-item" *ngFor="#comentario of comentarios;">
+<div class="col-sm-12 critica-item">
     <div class="caption">
         <div class="col-sm-11 caption-content">
-              <h3 class="caption-text">{{ comentario.comentario }}</h3>
-              <h4 class="caption-text">{{ comentario.nombre }}</h4>
+              <h3 class="caption-text">{{ inputComentario }}</h3>
+              <h4 class="caption-text">{{ inputNombre }}</h4>
         </div>
         <div class="col-sm-1 score">
-                <span (click)="sumarVoto()" class="glyphicon glyphicon-arrow-up caption-text icon-arrow" aria-hidden="true"></span>
-                <span (click)="restarVoto()" class="glyphicon glyphicon-arrow-down caption-text icon-arrow" aria-hidden="true"></span>
-                <span class="caption-text icon-arrow">{{ comentario.votos }}</span>
+                <span (click)="emitSumarVoto(index);" class="glyphicon glyphicon-arrow-up caption-text icon-arrow" aria-hidden="true"></span>
+                <span (click)="emitRestarVoto(index);" class="glyphicon glyphicon-arrow-down caption-text icon-arrow" aria-hidden="true"></span>
+                <span class="caption-text icon-arrow">{{ inputVotos }}</span>
         </div>
     </div>
 </div>

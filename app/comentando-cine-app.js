@@ -67,6 +67,16 @@ var ComentandoCineApp = (function () {
     ComentandoCineApp.prototype.sortedComentarios = function () {
         return this.comentarios.sort(function (a, b) { return b.votos - a.votos; });
     };
+    ComentandoCineApp.prototype.sumarVoto = function (index) {
+        if (this.comentarios[index].votos < 999) {
+            this.comentarios[index].votos += 1;
+        }
+    };
+    ComentandoCineApp.prototype.restarVoto = function (index) {
+        if (this.comentarios[index].votos > 0) {
+            this.comentarios[index].votos -= 1;
+        }
+    };
     ComentandoCineApp = __decorate([
         core_1.Component({
             selector: 'comentando-cine-app',

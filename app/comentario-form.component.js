@@ -11,21 +11,18 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require('@angular/core');
 var ComentarioFormComponent = (function () {
     function ComentarioFormComponent() {
-        this.inputNombre = new core_1.EventEmitter();
-        this.inputComentario = new core_1.EventEmitter();
+        this.addComentario = new core_1.EventEmitter();
     }
     ComentarioFormComponent.prototype.emitComentario = function (nombre, comentario) {
-        this.inputNombre.emit(nombre);
-        this.inputComentario.emit(comentario);
+        this.addComentario.emit({
+            nombre: nombre,
+            comentario: comentario
+        });
     };
     __decorate([
         core_1.Output(), 
         __metadata('design:type', Object)
-    ], ComentarioFormComponent.prototype, "inputNombre", void 0);
-    __decorate([
-        core_1.Output(), 
-        __metadata('design:type', Object)
-    ], ComentarioFormComponent.prototype, "inputComentario", void 0);
+    ], ComentarioFormComponent.prototype, "addComentario", void 0);
     ComentarioFormComponent = __decorate([
         core_1.Component({
             selector: 'comentario-form',

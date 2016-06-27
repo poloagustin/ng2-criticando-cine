@@ -73,4 +73,16 @@ export class ComentandoCineApp {
   sortedComentarios(): Comentario[] {
     return this.comentarios.sort((a: Comentario, b: Comentario) => b.votos - a.votos);
   }
+
+  sumarVoto(index: number) {
+    if (this.comentarios[index].votos < 999) {
+      this.comentarios[index].votos += 1;
+    }
+  }
+
+  restarVoto(index: number) {
+    if (this.comentarios[index].votos > 0) {
+      this.comentarios[index].votos -= 1;
+    }
+  }
 }

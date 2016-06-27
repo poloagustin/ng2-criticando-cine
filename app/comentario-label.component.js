@@ -11,11 +11,39 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require('@angular/core');
 var ComentarioLabelComponent = (function () {
     function ComentarioLabelComponent() {
+        this.sumarVoto = new core_1.EventEmitter();
+        this.restarVoto = new core_1.EventEmitter();
     }
+    ComentarioLabelComponent.prototype.emitSumarVoto = function (index) {
+        this.sumarVoto.emit(index);
+    };
+    ComentarioLabelComponent.prototype.emitRestarVoto = function (index) {
+        this.restarVoto.emit(index);
+    };
     __decorate([
         core_1.Input(), 
-        __metadata('design:type', Array)
-    ], ComentarioLabelComponent.prototype, "comentarios", void 0);
+        __metadata('design:type', String)
+    ], ComentarioLabelComponent.prototype, "inputComentario", void 0);
+    __decorate([
+        core_1.Input(), 
+        __metadata('design:type', String)
+    ], ComentarioLabelComponent.prototype, "inputNombre", void 0);
+    __decorate([
+        core_1.Input(), 
+        __metadata('design:type', String)
+    ], ComentarioLabelComponent.prototype, "inputVotos", void 0);
+    __decorate([
+        core_1.Input(), 
+        __metadata('design:type', Number)
+    ], ComentarioLabelComponent.prototype, "index", void 0);
+    __decorate([
+        core_1.Output(), 
+        __metadata('design:type', Object)
+    ], ComentarioLabelComponent.prototype, "sumarVoto", void 0);
+    __decorate([
+        core_1.Output(), 
+        __metadata('design:type', Object)
+    ], ComentarioLabelComponent.prototype, "restarVoto", void 0);
     ComentarioLabelComponent = __decorate([
         core_1.Component({
             selector: 'comentario-label',

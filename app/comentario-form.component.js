@@ -9,15 +9,18 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
+var Comentario_1 = require('./Comentario');
 var ComentarioFormComponent = (function () {
     function ComentarioFormComponent() {
         this.addComentario = new core_1.EventEmitter();
     }
     ComentarioFormComponent.prototype.emitComentario = function (nombre, comentario) {
-        this.addComentario.emit({
-            nombre: nombre,
-            comentario: comentario
-        });
+        console.log('nombre:' + nombre);
+        console.log('comentario:' + comentario);
+        var coment = new Comentario_1.Comentario();
+        coment.setComentario(comentario);
+        coment.setNombre(nombre);
+        this.addComentario.emit(coment);
     };
     __decorate([
         core_1.Output(), 

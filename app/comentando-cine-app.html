@@ -85,9 +85,9 @@
         </div>
         <div class="row">
           <comentario-label *ngFor="let comentario of sortedComentarios(); let index=index"
-            [inputComentario]="comentario.comentario"
-            [inputNombre]="comentario.nombre"
-            [inputVotos]="comentario.votos"
+            [inputComentario]="comentario.getComentario()"
+            [inputNombre]="comentario.getNombre()"
+            [inputVotos]="comentario.getVotos()"
             [index]="index"
             (sumarVoto)="sumarVoto($event)"
             (restarVoto)="restarVoto($event)"
